@@ -46,11 +46,29 @@ Basic usage (defaults to today and 50 as upper bound):
 uv run randomnumber.py
 ```
 
-To specify a different timestamp or upper bound, for example January 21, 2024 with an upper bound of 100:
+You can customize the random number generation with the following arguments:
 
+```bash
+uv run randomnumber.py [timestamp] [upper_bound]
+```
+
+Examples:
+
+1. Generate number for a specific date (defaults to upper bound of 50):
+```bash
+uv run randomnumber.py 2024-01-21
+```
+
+2. Generate number for specific date with custom upper bound:
 ```bash
 uv run randomnumber.py 2024-01-21 100
 ```
+
+Note: 
+- Timestamp format: YYYY-MM-DD
+- Upper bound must be a positive integer
+- If no arguments are provided, today's date and upper bound of 50 are used
+- To use a custom upper bound, you must specify a date
 
 ## Feedback
 
